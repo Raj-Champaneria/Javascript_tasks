@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //1-  Create a Date object with today's date.
+
+        let todayDate = new Date();
+        document.write(todayDate + "<br>" + "<br>");
+
+        //2- Create a Date object with the date of 15 december 2022.
+
+        let dec_date = new Date('december 15 2022')
+        document.write(dec_date + "<br>" + "<br>");
+
+        //3- create a program to Display the current day and time in the following format.
+        let days = ["sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let current_day = (`Today is ${days[new Date().getDay()]} <br> <br>`);
+
+        let hour = new Date().getHours();
+
+        if (hour > 12) {
+            hour = hour - 12;
+        }
+        let ampm = new Date().getHours();
+        let minutes=new Date().getMinutes();
+        let seconds=new Date().getSeconds();
+
+        let getampm=(ampm > 12) ? "PM":"AM"; 
+
+        document.write(`current time is : ${hour} `);
+        document.write(`${getampm} :`);
+        document.write(`${minutes} :`);
+        document.write(`${seconds} <br> <br>`);
+
+        document.write(current_day);
+
+        //4- write a program to find square root of number
+
+        let number = Math.sqrt(49);
+        document.write(`square root of 49 is ${number} <br> <br>`);
+
+        //5. Find The maximum number of given number
+        document.write(`The Maximum Number is ${Math.max(44, 45, 48, 50, 100, 45)} <br> <br>`);
+
+        //6.Create a random number Generator.
+        let random_number = Math.round((Math.random() * 1000));
+        document.write(`Your Random Generate number is ${random_number} <br> <br>`);
+
+        //7.find a number is greater than 100 and less than 500.
+        function findNum(maxnum) {
+
+
+            if (maxnum >= 100 && maxnum < 500) {
+                document.write(`${maxnum} number is between 100 and 500 <br> <br> `);
+            }
+            else {
+                document.write(`Number is Not Between 100 and 500 <br> <br>`);
+            }
+        }
+        findNum(100);
+
+        //8.write a function that returns a true if the arguments are equal , and false if they are not.
+
+        function checkEquality(a, b) {
+            if (a === b) {
+                document.write(`true <br>`);
+            }
+            else {
+                document.write("false" + '<br>');
+            }
+        }
+        checkEquality(0, "0");
+        checkEquality(0, 0);
+
+    </script>
+</body>
+
+</html>
