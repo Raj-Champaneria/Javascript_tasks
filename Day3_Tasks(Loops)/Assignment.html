@@ -60,8 +60,35 @@
                 movie:"batman",
                 director:"jack dens",
                 watched:false
+            },
+            {
+                movie:"Pathaan",
+                director:"sanjay leela",
+                watched:true
+            }, 
+            {
+                movie:"SOTY",
+                director:"karan johar",
+                watched:false
             }
         ]
+
+        // strrr = movies.map((item)=>{
+        //     return item.watched ? (`The Movie ${item.movie} by ${item.director} has been watched!!`):(`The movie ${item.movie} by ${item.director} is yet to be watched!!`)
+        // })
+        // console.log(strrr)
+
+        for (i=0; i<movies.length;i++)
+        {
+            if(movies[i]['watched']==true)
+            {
+                console.log(`The Movie ${movies[i]['movie']} by ${movies[i]['director']} has been watched!!`)
+            }
+            else
+            {
+                console.log(`The Movie ${movies[i]['movie']} by ${movies[i]['director']} is yet to be watched!!`)
+            }
+        }
     </script>
 </body>
 
