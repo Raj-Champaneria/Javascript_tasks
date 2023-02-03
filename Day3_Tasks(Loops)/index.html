@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1st Assignment Revese String with for.
+        let str = "nisha";
+        let string = `Original string =${str} <br><br>`;
+        document.write(string);
+        let strlen = str.length;
+        let revesestr = "";
+        //Calculating the length of string = 11.
+        document.write(`Length of string is :${strlen} <br><br>`);
+
+        document.write("Revese String Is=");
+
+        for (i = strlen - 1; i >= 0; i--) {
+            revesestr += str[i];
+        }
+        document.write(`${revesestr} <br><br> `);
+
+        //2nd Assignment Pallindrom or not
+        if (str == revesestr) {
+            document.write(`${str} is pallindrom <br><br>`);
+        }
+        else {
+            document.write(`${str} isn't pallindrom <br><br>`) ;
+        }
+        
+        //3 armstrong number
+        let number = 13;
+
+        let num_to_str=number.toString();
+        console.log(num_to_str);
+
+        let length=num_to_str.length;
+        console.log(length);
+        let sum=0;
+        for(i=0;i<length;i++)
+        {
+            let a=parseInt(num_to_str[i]);
+            sum += Math.pow(a,length);
+        }
+        console.log(typeof sum);
+        document.write(`You Number is ${number} and `)
+        if(number==sum){
+            document.write(`${number} is armstrong number <br>`);
+        }
+        else{
+            document.write(`${number} is Not armstrong number`);
+
+        }
+
+    </script>
+</body>
+
+</html>

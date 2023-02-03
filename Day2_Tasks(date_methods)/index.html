@@ -33,8 +33,7 @@
         let ampm = new Date().getHours();
         let minutes=new Date().getMinutes();
         let seconds=new Date().getSeconds();
-
-        let getampm=(ampm > 12) ? "PM":"AM"; 
+        let getampm=(ampm >= 12) ? "PM":"AM"; 
 
         document.write(`current time is : ${hour} `);
         document.write(`${getampm} :`);
@@ -44,7 +43,7 @@
         document.write(current_day);
 
         //4- write a program to find square root of number
-
+        
         let number = Math.sqrt(49);
         document.write(`square root of 49 is ${number} <br> <br>`);
 
@@ -58,15 +57,14 @@
         //7.find a number is greater than 100 and less than 500.
         function findNum(maxnum) {
 
-
             if (maxnum >= 100 && maxnum < 500) {
                 document.write(`${maxnum} number is between 100 and 500 <br> <br> `);
             }
             else {
-                document.write(`Number is Not Between 100 and 500 <br> <br>`);
+                document.write(`${maxnum} is Not Between 100 and 500 <br> <br>`);
             }
         }
-        findNum(100);
+        findNum(600);
 
         //8.write a function that returns a true if the arguments are equal , and false if they are not.
 
@@ -78,8 +76,8 @@
                 document.write("false" + '<br>');
             }
         }
-        checkEquality(0, "0");
-        checkEquality(0, 0);
+        checkEquality(0, 0);//true
+        checkEquality(0, "0");//false
 
     </script>
 </body>
