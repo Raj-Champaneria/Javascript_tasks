@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. Write a JavaScript function that reverse a number.
+      function reverseNumber(a) {
+        var type = String(a);
+        console.log(typeof type);
+        let reversnumber = " ";
+
+        for (let index = type.length - 1; index >= 0; index--) {
+          reversnumber += type[index];
+        }
+        console.log(reversnumber);
+      }
+      reverseNumber("19");
+
+      //2. Write a JavaScript function that returns a passed string with letters in alphabetical order.
+
+      function alphabeticalOrder(x) {
+        return x.split("").sort().join("");
+      }
+      console.log(alphabeticalOrder("jayesh"));
+
+      //3 Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case.
+
+      //   function uppercase(string) {}
+      //   uppercase("my name is raj");
+
+      //4:Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
+
+      function longestword(str) {
+        let char = str.split(" ");
+        console.log(char);
+        let newchar = " ";
+        let maxchar = 0;
+        for (i = 0; i < char.length; i++) {
+          if (char[i].length > maxchar) {
+            maxchar = char[i].length;
+            newchar = char[i];
+          }
+        }
+        console.log(
+          `My string is ${str}  the longest word is ${newchar} and its length is ${maxchar}`
+        );
+      }
+      longestword("My NAME IS raj and surname is champaneria");
+
+      //9  Write a JavaScript program to pass a 'JavaScript function' as parameter.
+
+    
+      //8 Write a JavaScript function to get the function name.
+
+      function getFuncName() {
+        return getFuncName.caller.name;
+      }
+      function raj() {
+        console.log(getFuncName());
+      }
+      raj();
+    </script>
+  </body>
+</html>
