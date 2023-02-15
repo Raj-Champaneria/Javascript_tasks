@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1. Write a JavaScript function to retrieve all the values of an object's
+    properties. 2. Write a JavaScript function to convert an object into a list
+    of `[key, value]` pairs. 3. Write a JavaScript function to get a copy of the
+    object where the keys have become the values and the values the keys. 4.
+    Write a JavaScript program to find the most frequent item of an array. 5.
+    Write a JavaScript program to remove duplicate items from an array (ignore
+    case sensitivity). 6. Write a JavaScript function to merge two arrays and
+    removes all duplicates elements. 7. Write a JavaScript function to remove a
+    specific element from an array. 8. Write a JavaScript function to get a
+    random item from an array.[1,2,3,4,5,6,7,8,9,10] 9. Write a JavaScript
+    function to filter false, null, 0 and blank values from an array.[58, '',
+    'abcd', true, null, false, 0] -->
+
+    <script>
+      // ypour code
+      let obj1 = {
+        name: "raj",
+        surname: "patel",
+      };
+      let obj2 = {
+        name: "Jayesh",
+        surname: "Champaneria",
+      };
+
+      //1 function to retrieve all the values of object's Properties
+      function findObjValue(funcname) {
+        return Object.values(funcname);
+      }
+      const data = findObjValue(obj2);
+
+      console.log(data);
+
+      //with for in loop
+      for (let c in obj1) {
+        console.log(obj1[c]);
+      }
+
+      //2 Write a JavaScript function to convert an object into a list of `[key, value]
+      function findObjProperties(funcname) {
+        return Object.entries(funcname);
+      }
+      const data3 = findObjProperties(obj1);
+      console.log(data3);
+
+      //3.Write a JavaScript function to get a copy of the object where the keys have become the values and the values the keys.
+      function swap(obj) {
+        var newobj = {};
+        for (var k in obj) {
+          newobj[obj[k]] = k;
+        }
+        return newobj;
+      }
+      let x = swap(obj1);
+      console.log(x);
+
+      // 4] Write a JavaScript program to find the most frequent item of an array.
+
+      //5] Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+      function removeDuplicate(w) {
+        let p = [...new Set(w)];
+        return p;
+      }
+      arr10 = [1, 2, 3, 4, 5, 6, 7, 4, 2, 1, 5, 10];
+      console.log(removeDuplicate(arr10));
+
+      //6] Write a JavaScript function to merge two arrays and removes all duplicates elements.
+      function mergeDuplicate(v, b) {
+        let concat = v.concat(b);
+        console.log(concat);
+        let e = [...new Set(concat)];
+        e.sort((a, b) => a - b);
+        return e;
+      }
+      let num1 = [1, 2, 2, 3, 10];
+      let num2 = [4, 5, 6, 3, 11];
+      console.log(mergeDuplicate(num1, num2));
+
+      //7]Write a JavaScript function to remove a specific element from an array.
+      function removespecific(arr, val) {
+        let n = [];
+        for (i = 0; i < arr.length; i++) {
+          if (arr[i] !== val) {
+            n.push(arr[i]);
+          }
+        }
+        return n;
+      }
+      let out = removespecific([1, 2, 3, 4], 3);
+      console.log(out + "raaajjjjjj");
+
+      //8] Write a JavaScript function to get a random item from an array.[1,2,3,4,5,6,7,8,9,10]
+      function randomNumber(items) {
+        return items[Math.floor(Math.random() * items.length)];
+      }
+      let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      console.log(randomNumber(arr));
+      //9]Write a JavaScript function to filter false, null, 0 and blank values from an array.[58, '', 'abcd', true, null, false, 0]
+      function filt(items) {
+        return items.filter((val) => {
+          if (val !== false || val !== 0 || val !== "" || val !== null) {
+            return val;
+          }
+        });
+      }
+
+      let arr1 = [58, "", " abcd", true, null, false, 0];
+      console.log(filt(arr1));
+    </script>
+  </body>
+</html>
