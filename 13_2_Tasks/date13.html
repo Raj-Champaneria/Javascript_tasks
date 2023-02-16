@@ -96,23 +96,30 @@
 
       //6] Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
 
-      function LongestCountry(arr) {
-        let nw = [];
-        for (i = 0; i < arr.length; i++) {
-          nw.push(arr[i].length);
-        }
-        let f = Math.max(...nw);
-        let b = arr.indexOf(f);
-        let u = arr.at(b);
-        return u;
+      // function LongestCountry(arr) {
+      //   let nw = [];
+      //   for (i = 0; i < arr.length; i++) {
+      //     nw.push(arr[i].length);
+      //   }
+      //   let f = Math.max(...nw);
+      //   let b = arr.indexOf(f);
+      //   let u = arr.at(b);
+      //   return u;
+      // }
+      // let country_names = [
+      //   "Gujarat",
+      //   "Maharastra",
+      //   "Chennaissss",
+      //   "hhhsfusgfughkh",
+      // ];
+      // console.log(LongestCountry(country_names));
+      function LongestCountry(arr)
+      {
+        return arr.reduce((a,b)=>a.length > b.length ? a :b)
       }
-      let country_names = [
-        "Gujarat",
-        "Maharastra",
-        "Chennaissss",
-        "hhhsfusgfughkh",
-      ];
-      console.log(LongestCountry(country_names));
+      let u=["Gujarat","maharastra","Jammu-kashmir"];
+      console.log(LongestCountry(u));
+
 
       //7 Write a JavaScript program to pass a 'JavaScript function' as parameter.
       function hello() {

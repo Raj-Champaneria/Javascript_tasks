@@ -105,15 +105,31 @@
       console.log(randomNumber(arr));
       //9]Write a JavaScript function to filter false, null, 0 and blank values from an array.[58, '', 'abcd', true, null, false, 0]
       function filt(items) {
-        return items.filter((val) => {
-          if (val !== false || val !== 0 || val !== "" || val !== null) {
-            return val;
-          }
-        });
+        let x = items.filter(
+          (val) => val !== false && val !== 0 && val !== "" && val !== null
+        );
+        return x;
       }
 
       let arr1 = [58, "", " abcd", true, null, false, 0];
       console.log(filt(arr1));
+
+      //longest word in string
+
+      function lw(str) {
+        let x = str.split(" ");
+        console.log(x);
+        return x.reduce((a, b) => (a.length > b.length ? a : b));
+      }
+      console.log(lw("My nameasdasd is rajasfdasfd"));
+
+      //false,null
+
+      function nine(aww) {
+        let x = aww.filter((ele) => ele !== 58 && ele !== "abcd");
+        return x;
+      }
+      console.log(nine([58, "", "abcd", true, null, false, 0]));
     </script>
   </body>
 </html>
